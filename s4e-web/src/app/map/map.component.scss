@@ -1,14 +1,10 @@
 @import "../../scss/common";
 
 .map-container {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  z-index: 10;
-  width: 289px;
   border: 1px solid #333333;
   background-color: #ffffff;
   color: $gray-900;
+  display: none;
 }
 
 #map {
@@ -37,4 +33,7 @@
   outline: none !important;
   box-shadow: none !important;
 }
+
+
+:host ::ng-deep > s4e-login {position: relative;}
 

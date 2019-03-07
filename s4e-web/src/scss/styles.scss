@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "_bootstrap-variables";
 @import "~bootstrap/scss/bootstrap";
-@import "bootstrap-view";
+//@import "bootstrap-view";
 
 
 .ol-zoom {
@@ -11,4 +11,95 @@
 
 .ol-rotate {
   display: none;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: $font-family-main; font-size: $font-size-main;}
+
+
+.btn-default {
+  border: 1px solid $color-grey;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+
+.sidebar {
+  height: 100%;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  background: #fff;
+  width: 350px;
+  -webkit-box-shadow: 6px 0px 13px -4px rgba(0,0,0,0.39);
+  -moz-box-shadow: 6px 0px 13px -4px rgba(0,0,0,0.39);
+  box-shadow: 6px 0px 13px -4px rgba(0,0,0,0.39);
+
+  .section-header {
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+  }
+
+  /* stop the glowing blue shadow */
+  .add-on {
+    .input-group-btn {
+      >.btn {
+        border-left-width: 0;
+        left: -2px;
+        border-radius: 0 $border-radius 0
+      }
+    }
+  }
+  .add-on {
+    .form-control {
+      &:focus {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        border-color: $color-grey;
+      }
+    }
+  }
+
+
+
+}
+
+section {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid $color-grey;
+
+  &:last-child {
+    border: none;
+  }
+
+  .section-header,
+  .section-content {
+    padding: 0 20px;
+  }
+
+
+
+  &.section-products {
+
+    li {
+      padding: 0.5rem 1rem;
+      &:hover {
+        i {
+          opacity: 1;
+        }
+      }
+      i {
+        opacity: 0.4;
+      }
+
+      .active i {
+        opacity: 1;
+      }
+    }
+  }
 }
