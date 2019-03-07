@@ -1,15 +1,15 @@
 <aside class="sidebar d-flex flex-column" id="mainMenu"[ngbCollapse]="isCollapsed">
   <section class="section-search">
-        <div class="section-content">
-          <form>
-            <div class="input-group add-on">
-              <input class="form-control" placeholder="Znajdź swoją miejscowość" name="srch-term" id="srch-term" type="text">
-              <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="fas fa-search"></i></button>
-              </div>
+    <div class="section-content">
+      <form>
+        <div class="input-group add-on">
+          <input class="form-control" placeholder="Znajdź swoją miejscowość" name="srch-term" id="srch-term" type="text">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="fas fa-search"></i></button>
+          </div>
         </div>
-          </form>
-        </div>
+      </form>
+    </div>
   </section>
   <section class="section-products">
     <div class="section-header">
@@ -18,8 +18,8 @@
     <div class="section-content">
       <ul class="list-group list-group-flush">
         <li class="list-group-item clickable"
-          *ngFor="let product of products | async"
-             (click)="selectProduct(product)">
+            *ngFor="let product of products | async"
+            (click)="selectProduct(product)">
           <div class="row">
             <div class="col-2">
               <i class="far fa-eye"></i>
@@ -51,8 +51,6 @@
     </ul>
   </div>
 </div>
-
-
 <div class="map-container clearfix">
   <s4e-view-manager
     [activeGranuleView]="activeGranuleView"

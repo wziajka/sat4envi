@@ -7,6 +7,7 @@ import { TileWMS, ImageWMS, OSM } from 'ol/source';
 import {map} from 'rxjs/operators';
 import {format} from 'date-fns';
 import proj4 from 'proj4';
+import * as $ from 'jquery';
 
 import {geoserverUrl} from '../constants';
 import {Granule} from '../products/granule.model';
@@ -64,6 +65,16 @@ export class MapComponent implements OnInit {
     });
     this.granuleViews = [];
     this.updateLayers();
+
+    $(document).ready(function() {
+      $('.sidebar-toggle').on('click'), function() {
+        $(this).addClass('active');
+      }
+
+    })
+
+
+
   }
 
   selectProduct(product: Product): void {
