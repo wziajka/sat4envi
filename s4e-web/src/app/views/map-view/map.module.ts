@@ -9,15 +9,16 @@ import { LayerPicker } from './view-manager/layer-picker/layer-picker.component'
 import {ProductTypeQuery} from './state/product-type/product-type.query';
 import {ProductTypeService} from './state/product-type/product-type.service';
 import {ProductTypeStore} from './state/product-type/product-type.store';
-import {ProductQuery} from './state/product/product-query.service';
+import {ProductQuery} from './state/product/product.query';
 import {ProductService} from './state/product/product.service';
-import {ProductStore} from './state/product/product-store.service';
+import {ProductStore} from './state/product/product.store';
 import { TimelineComponent } from './timeline/timeline.component';
 import { MapComponent } from './map/map.component';
 import {OverlayQuery} from './state/overlay/overlay.query';
 import {OverlayService} from './state/overlay/overlay.service';
 import {OverlayStore} from './state/overlay/overlay.store';
 import {BsDropdownModule} from 'ngx-bootstrap';
+import { LegendComponent } from './legend/legend.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {BsDropdownModule} from 'ngx-bootstrap';
     LayerPicker,
     TimelineComponent,
     MapComponent,
+    LegendComponent,
   ],
   exports: [
     MapViewComponent,

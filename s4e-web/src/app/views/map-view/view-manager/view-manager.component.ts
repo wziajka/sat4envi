@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Layer, Image} from 'ol/layer';
 import {ImageWMS} from 'ol/source';
 import {IUILayer} from '../state/common.model';
+import {ProductType} from '../state/product-type/product-type.model';
 
 @Component({
   selector: 's4e-view-manager',
@@ -11,7 +12,7 @@ import {IUILayer} from '../state/common.model';
 export class ViewManagerComponent {
   @Input() loading = true;
 
-  @Input() products: IUILayer[] = [];
+  @Input() productsTypes: IUILayer[] = [];
   @Input() productTypeLoading: boolean = true;
   @Output() selectProductType = new EventEmitter<number>();
 
