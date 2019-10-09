@@ -6,6 +6,7 @@ import lombok.Singular;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -23,6 +24,9 @@ public class AppUser {
 
     @Singular
     private Set<AppRole> roles;
+
+    @ManyToMany(mappedBy = "members", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private List<Group> groups;
 
     private boolean enabled;
 }

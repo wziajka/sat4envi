@@ -65,6 +65,26 @@ public class ErrorHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
+    @ExceptionHandler(InstitutionCreationException.class)
+    public ResponseEntity<?> handleInstitutionCreationException() {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+
+    @ExceptionHandler(InstitutionUpdateException.class)
+    public ResponseEntity<?> handleInstitutionUpdateException() {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+
+    @ExceptionHandler(GroupCreationException.class)
+    public ResponseEntity<?> handleGroupCreationException() {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+
+    @ExceptionHandler(GroupUpdateException.class)
+    public ResponseEntity<?> handleGroupUpdateException() {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException e, HttpHeaders headers, HttpStatus status, WebRequest request) {
         BindingResult bindingResult = e.getBindingResult();
