@@ -9,8 +9,8 @@ jobs:
       postgres:
         image: postgres:10.8
         env:
-          POSTGRES_USER: admin
-          POSTGRES_PASSWORD: admin123
+          POSTGRES_USER: sat4envi_test
+          POSTGRES_PASSWORD: sat4envi_test
           POSTGRES_DB: sat4envi_test
         ports:
         # will assign a random free host port
@@ -24,7 +24,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11.0.2
-    - name: Build with Maven
-      run: ./mvnw compile -DskipTests
+#     - name: Build with Maven
+#       run: ./mvnw compile -DskipTests
     - name: Run tests
       run: ./mvnw test
