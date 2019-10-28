@@ -27,4 +27,6 @@ jobs:
 #     - name: Build with Maven
 #       run: ./mvnw compile -DskipTests
     - name: Run tests
-      run: ./mvnw test
+      run: echo $SPRING_DATASOURCE_URL ; ./mvnw test
+      env:
+        SPRING_DATASOURCE_URL: jdbc:postgresql://posgres:5432/sat4envi_test
