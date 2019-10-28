@@ -29,4 +29,4 @@ jobs:
     - name: Run tests
       run: echo $SPRING_DATASOURCE_URL ; ./mvnw test
       env:
-        SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sat4envi_test
+        SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:${{ job.services.postgres.ports[5432] }}/sat4envi_test
