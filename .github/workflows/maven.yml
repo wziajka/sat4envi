@@ -31,4 +31,4 @@ jobs:
       env:
         # use localhost for the host here because we are running the job on the VM.
         # If we were running the job on in a container this would be postgresq
-        SPRING_DATASOURCE_URL="jdbc:postgresql://postgres:5434/sat4envi_test"
+        SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5434/sat4envi_test
